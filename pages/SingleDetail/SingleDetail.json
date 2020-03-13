@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "薇妮门店360评估",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

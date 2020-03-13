@@ -1,0 +1,33 @@
+<!--门店提报-大区门店列表-->
+<view class="container">
+  <text class="title">门店提报 - 门店列表</text>
+  <view class="record_select">
+    <text class="record">{{area.area_name}} 总计：</text>
+    <view class="data">
+      <picker mode="date" value="{{date}}" start="{{start_date}}" end="{{end_date}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+      <view class="jt">
+        <image src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="record_detail">
+    <text>当日业绩：{{total.sale}}</text>
+    <text>累计业绩：{{total.total_sale}}</text>
+  </view>
+  <!--门店列表-->
+  <view class="conn">
+    <view class="list" wx:for="{{list}}" wx:key='index' bindtap="daily_list" data-name="{{item.name}}" data-id="{{item.store_id}}">
+      <text class="name">{{item.store_name}}</text>
+      <view class="detail">
+        <text>当日业绩：{{item.sale}}</text>
+        <text>累计业绩：{{item.total_sale}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="top" hidden='{{!cangotop}}'catchtap="goTop"><image src="https://evathumber.vinistyle.cn/upload/202002/20200217191034102.png"></image></view>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+  <image class='logo' src="https://evathumber.vinistyle.cn/upload/201912/20191231125024166.png"></image>
+  <view class="conn">
+    <text class="title">薇妮门店会员关键指标自检表</text>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{arrayIdx}}" range="{{stores}}" range-key="name">
+        <view class="picker">
+          <!-- <input placeholder="门 店" value="{{stores[arrayIdx].name}}" disabled="true"></input> -->
+          <text wx:if="{{arrayIdx == null}}">门 店</text>
+          <text>{{stores[arrayIdx].name}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <picker bindchange="bindDateChange" value="{{dataIdx}}" range="{{ranges}}">
+        <view class="picker">
+          <!-- <input placeholder="年 月" value="{{ranges[dataIdx]}}" disabled="true"></input> -->
+          <text wx:if="{{dataIdx == null}}">年 月</text>
+          <text>{{ranges[dataIdx]}}</text>
+        </view>
+      </picker>
+    </view>
+    <button class="enquiry" bindtap="enquiryBtn">查询</button> 
+  </view>
+</view>

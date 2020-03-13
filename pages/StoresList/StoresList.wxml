@@ -1,0 +1,32 @@
+<!--门店提报-门店列表-->
+<view class="container">
+  <text class="title">门店提报 - 门店列表</text>
+  <view class="record_select">
+    <text class="record">我管辖的门店总计：</text>
+    <view class="data">
+      <picker mode="date" value="{{date}}" start="{{start_date}}" end="{{end_date}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+      <view class="jt">
+        <image src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+        <!-- <image src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image> -->
+      </view>
+    </view>
+  </view>
+  <view class="record_detail">
+    <text>当日业绩：{{item.sale}}</text>
+    <text>累计业绩：{{item.total_sale}}</text>
+  </view>
+  <!--门店列表-->
+  <view class="conn">
+    <view class="list" wx:for="{{StoreList}}" wx:key='index' bindtap="daily_list" data-name="{{item.name}}" data-id="{{item.id}}">
+      <text class="name">{{item.name}}</text>
+      <view class="detail">
+        <text>当日业绩：{{item.sale}}</text>
+        <text>累计业绩：{{item.total_sale}}</text>
+      </view>
+    </view>
+  </view>
+</view>

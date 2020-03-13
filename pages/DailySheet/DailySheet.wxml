@@ -1,0 +1,29 @@
+<!--门店提报 - 日报提交-->
+<view class="container">
+	<text class="title">门店提报 - 日报提交</text>
+	<view class="conn">
+		<view><text>日期：</text><input class="input" disabled='disabled' value="{{date}}" /></view>
+		<view><text>区域：</text><input class="input" disabled='disabled' value="{{item.store_area}}" /></view>
+		<view><text>门店：</text><input class="input" disabled='disabled' value="{{item.store_name}}" /></view>
+		<view wx:if='{{sale_show}}'><text>初始业绩：</text><input class="input"  type="digit" bindinput="init_sale" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view><text>当日业绩：</text><input class="input"  type="digit" bindinput="sale" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view><text>新增会员人数：</text><input class="input" type="digit" bindinput="new_member_count" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view><text>新增会员单笔：</text><input class="input" type="digit" bindinput="new_member_sale" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view><text>老会员人数：</text><input class="input" type="digit" bindinput="old_member_count" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view><text>老会员单笔：</text><input class="input" type="digit" bindinput="old_member_sale" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view wx:if='{{community_show}}'><text>累计社群新客人数：</text><input class="input"  type="digit" bindinput="community_new_count" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<view wx:if='{{community_show}}'><text>累计社群老客人数：</text><input class="input" type="digit" bindinput="community_old_count" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+	</view>
+
+	<view class="plan">
+		<text>今日工作</text>
+		<textarea maxlength="-1" placeholder="填写工作内容如: 1.招募会员 2.开展秒杀活动..." placeholder-class="placeholderStyle" bindinput="today_work"></textarea>
+	</view>
+
+	<view class="plan">
+		<text>明日计划</text>
+		<view class="target"><text>业绩目标：</text><input class="input" type="digit" bindinput="tomorrow_sale" placeholder="请输入..." placeholder-class="placeholderStyle" /></view>
+		<textarea maxlength="-1" placeholder="填写工作内容如: 1.招募会员 2.开展秒杀活动..." placeholder-class="placeholderStyle" bindinput="tomorrow_plan"></textarea>
+	</view>
+	<button class="submitBtn" bindtap="submitBtn">提交</button>
+</view>

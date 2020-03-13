@@ -1,0 +1,36 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/register/register", 
+    "pages/PartnerEvaluate/PartnerEvaluate",
+    "pages/PartnerDetail/PartnerDetail",
+    "pages/SingleEvaluate/SingleEvaluate",
+    "pages/SingleDetail/SingleDetail",
+    "pages/Checking/Checking",
+    "pages/CheckingDetail/CheckingDetail",
+    "pages/LifeCycle/LifeCycle",
+    "pages/LifeDetail/LifeDetail",
+    "pages/AgentList/AgentList",
+    "pages/ManagerList/ManagerList",
+    "pages/UploadPic/UploadPic",
+    "pages/ReviewPic/ReviewPic",
+    "pages/StoresList/StoresList",
+    "pages/DailyList/DailyList",
+    "pages/DailySheet/DailySheet",
+    "pages/DailyCheck/DailyCheck",
+    "pages/AreaList/AreaList",
+    "pages/AreaStore/AreaStore",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx2b03c6e691cd7370"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

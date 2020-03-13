@@ -1,0 +1,78 @@
+<view class="listTop">
+  <!--筛选项-->
+  <view class="tabTit">
+    <!--日期筛选-->
+    <view class="filterTab {{textColor}}" bindtap="filterTab1">
+      <text class="tit_on" wx:if='{{date_quarters}}'>{{date_quarters}}</text>
+      <text class="tit" wx:else>日期</text>
+      <view class="jt">
+        <image wx:if="{{showview1 ? true : false}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+        <image wx:else src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+      </view>
+    </view>
+
+    <!--姓名筛选-->
+    <view class="filterTab {{textColor}}" bindtap="filterTab2">
+      <text class="tit_on" wx:if="{{agents}}">{{agents}}</text>
+      <text class="tit" wx:else>姓名</text>
+      <view class="jt">
+        <image wx:if="{{showview2 ? true : false}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+        <image wx:else src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+      </view>
+    </view>
+
+    <!--状态筛选-->
+    <view class="filterTab {{textColor}}" bindtap="filterTab3">
+      <text class="tit_on" wx:if="{{statusName}}">{{statusName}}</text>
+      <text class="tit" wx:else>状态</text>
+      <view class="jt">
+        <image wx:if="{{showview3 ? true : false}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+        <image wx:else src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+      </view>
+    </view>
+  </view>
+  <!--筛选项-->
+
+  <!--筛选框-->
+  <view class="tabConn">
+    <!--日期筛选-->
+    <scroll-view scroll-y="true" class='mjtk {{showview1 ? "hide" : "show"}}' style="height:{{winHeight+120}}rpx;">
+      <view class='mjtk1'>
+        <text wx:for="{{item.date_quarters}}" wx:key='' data-name="{{item}}" bindtap="DataSift">{{item}}</text>
+      </view>
+    </scroll-view>
+
+    <!--姓名筛选-->
+    <scroll-view scroll-y="true" class='mjtk {{showview2 ? "hide" : "show"}}' style="height:{{winHeight+120}}rpx;">
+      <view class='mjtk1'>
+        <text wx:for="{{item.agents}}" wx:key='' data-name="{{item.name}}" data-mobile="{{item.id}}" bindtap="AgentsSift">{{item.name}}</text>
+      </view>
+    </scroll-view>
+
+    <!--状态筛选-->
+    <scroll-view scroll-y="true" class='mjtk {{showview3 ? "hide" : "show"}}' style="height:{{winHeight+120}}rpx;">
+      <view class='mjtk1'>
+        <text wx:for="{{item.status}}" wx:key='' data-name="{{item.name}}" data-id="{{item.id}}" bindtap="StatusSift">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!--筛选框-->
+</view>
+
+<view class="listConn" style="height:{{winHeight}}rpx;">
+  <view class="list">
+    <view class="list-info" wx:if="{{listShow}}" wx:for="{{homeList}}" data-id="{{item.id}}" data-status="{{item.status}}" wx:key="" bindtap="listBtn">
+      <text class="tit">{{item.agent_name}} 提交了评估</text>
+      <view class="desc">
+        <text class="data">{{item.date_quarter}}</text>
+        <text class="state">{{item.status_text}}</text>
+      </view>
+    </view>
+
+    <!--没有符合筛选条件的数据-->
+    <text class="tips" wx:if="{{listHidden}}">无符合筛选条件的数据</text>
+  </view>
+
+  <!--全部加载完成提示-->
+  <text class='remind' wx:if="{{bottomTips==0 && listShow}}">已经到底啦...</text>
+</view>

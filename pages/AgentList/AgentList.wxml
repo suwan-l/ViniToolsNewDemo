@@ -1,0 +1,10 @@
+<view class="listConn">
+  <view class="list">
+    <view class="list-info" wx:for="{{item}}" data-index="{{index}}" data-id="{{item.id}}" data-time="{{item.date_quarter}}" data-status="{{item.status}}"  wx:key='index' bindtap="listBtn">
+      <view class="desc">
+        <text class="data">{{item.date_quarter}}</text>
+        <text class="state">{{item.status_text}}</text>
+      </view>
+    </view>
+  </view>
+</view>

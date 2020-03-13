@@ -1,0 +1,26 @@
+<view class="container">
+  <image class='logo' src="https://evathumber.vinistyle.cn/upload/201912/20191231125024166.png"></image>
+  <view class="title">
+    <text>薇妮门店生命周期模型</text>
+  </view>
+  <view class="conn">
+    <input class="input" type="digit" bindinput="keyword_1" placeholder="面积 (平米)" />
+    <input class="input" type="digit" bindinput="keyword_2" placeholder="租金 (元)" />
+    <input class="input" type="digit" bindinput="keyword_3" placeholder="进货金额 (元)" />
+    <input class="input" type="digit" bindinput="keyword_4" placeholder="流动资金 (元)" />
+    <input class="input" type="digit" bindinput="keyword_5" placeholder="促销杂费 (元)" />
+    <input class="input" type="digit" bindinput="keyword_6" placeholder="员工数量 (人)" />
+    <input class="input" type="digit" bindinput="keyword_7" placeholder="期望投资回报率 (1~100)" />
+    <!-- <input class="input" type="digit" bindinput="keyword_8" placeholder="预估年度人均消费金额 (元)" /> -->
+  </view>
+  <button class="submitBtn" bindtap="submitBtn">查询</button>
+
+  <view class="tips">
+    <text>说明：</text>
+    <text>1. 装修按2500元/平米标准，分3年摊销完</text>
+    <text>2. 进货不含铺货 (公司有铺货政策)</text>
+    <text>3. 水电费按30元/平米</text>
+    <text>4. 促销及杂费含日常消耗物资及小额支出</text>
+    <text>5. 员工配置一般按 30000元销售业绩配置 1 人 </text>
+  </view>
+</view>

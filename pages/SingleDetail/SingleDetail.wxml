@@ -1,0 +1,111 @@
+<view wx:if="{{isShow1}}" class="SingleConn">
+  <view class='top'>
+    <view class="info">
+      <view class="left">
+        <text class="rank">{{item.level}}</text>
+        <text class="text">门店评级</text>
+      </view>
+      <view class="right">
+        <text class="name">{{item.store_name}}</text>
+        <text class="data">{{item.date_quarter}}</text>
+      </view>
+    </view>
+
+    <view class="progress">
+      <text class="star" wx:if="{{item.total_score >=75 }}">75</text>
+      <progress percent="{{left}}" stroke-width="1" color="#fff" backgroundColor='#fff'>
+        <view class="tips" style="left:40%;">
+          <text>{{item.total_score}}</text>
+          <view class="icon"><i-icon type="like" size="20" color="#fff" /></view>
+        </view> 
+      </progress>
+      <text class="end" wx:if="{{item.total_score < 75 }}">75</text>
+    </view>
+  </view>
+
+  <view class="conn">
+    <view class="bottom">
+      <view class="detail">
+        <view class="left">
+          <text class="num">{{item.monthly_sales}}</text>
+          <text class="tips">月均业绩(元)</text>
+        </view>
+        <view class="right">
+          <text class="score">{{item.score.sales}}</text>
+          <text class="tips">得分</text>
+        </view>
+      </view>
+      <text class="remarks">注：门店进销存数据比例正常，若出现异常此项分值为0。</text>
+    </view>
+
+    <view class="bottom">
+      <view class="detail">
+        <view class="left">
+          <text class="num">{{item.increase_member_rate}}</text>
+          <text class="tips">新增会员人数提升率</text>
+          <text class="num">{{item.member_one_to_two_rate}}</text>
+          <text class="tips">一转二会员人数转化率</text>
+        </view>
+        <view class="right">
+          <text class="score">{{item.score.member}}</text>
+          <text class="tips">得分</text>
+        </view>
+      </view>
+      <text class="remarks">注：新增会员单月10人以下取消当季得分。</text>
+    </view>
+
+    <view class="bottom">
+      <view class="detail">
+        <view class="left">
+          <text class="num">{{item.training_count}}</text>
+          <text class="tips">参与培训班次数</text>
+
+          <text class="num">{{item.learning_staffs}}</text>
+          <text class="tips">线上学习平台结业人数</text>
+
+          <block wx:if="{{item.hide_store_image == 1?false:true}}">
+            <text class="num">{{item.store_image}}</text>
+            <text class="tips">店面陈列是否标准</text>
+          </block>
+
+          <block wx:if="{{item.hide_meeting == 1?false:true}}">
+            <text class="num">{{item.is_training_meeting == 1 ? '参加' : '未参加'}}</text>
+            <text class="tips">是否参与大型促销培训会议</text>
+          </block>
+      
+          <text class="num">{{item.illegal_count == 0 ? '无' : '有'}}</text>
+          <text class="tips">有无违规操作</text>
+        </view>
+        <view class="right">
+          <text class="score">{{item.score.training}}</text>
+          <text class="tips">加分</text>
+
+          <text class="score">{{item.score.learning}}</text>
+          <text class="tips">加分</text>
+          
+          <block wx:if="{{item.hide_store_image == 1?false:true}}">
+            <text class="score">{{item.score.store_image}}</text>
+            <text class="tips">加分</text>
+          </block>
+
+          <block wx:if="{{item.hide_meeting == 1?false:true}}">
+            <text class="score">{{item.score.meeting}}</text>
+            <text class="tips">加分</text>
+          </block>
+
+          <text class="score">{{item.score.illegal}}</text>
+          <text class="tips">减分</text>
+        </view>
+      </view>
+      <text class="remarks">注：违规操作包含：
+    ①破坏苏美价格体系：私自打折、低价促销
+    ②窜货：私自通过非规范渠道窜货或者窜货给他人
+    ③恶性的顾客投诉事件：顾客投诉（若门店责任），不给予解决
+    </text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{isShow2}}" class="NoData">
+  <image src="https://evathumber.vinistyle.cn/upload/202001/20200114142339605.png"></image>
+</view>

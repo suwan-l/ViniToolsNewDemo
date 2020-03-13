@@ -1,0 +1,330 @@
+<view wx:if="{{isShow1}}" class="checking">
+  <view class="checkingTop">
+    <view class="top">盈亏平衡点(元)</view>
+    <view class="bottom">
+      <text class="num">{{item.break_ever_point}}</text>
+      <text class="tips">注：指月度销售额达到该数值则保持盈亏平衡。</text>
+    </view>
+  </view>
+
+  <view class="checkingBottom">
+    <!--第一大类 指标概述-->
+    <view class="checkingType">
+      <view class="typeTop" bindtap="checkingType1">
+        <text>指标概述</text>
+        <view class="jt">
+          <image wx:if="{{!typeShows1}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+          <image wx:if="{{typeShows1}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+        </view>
+      </view>
+      <view class="typeBottom" wx:if="{{typeShows1}}">
+        <view class="checkingli">
+          <view class="top">月均销售额(元)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.monthly_sales}}</text>
+              <text>{{item2.monthly_sales}}</text>
+              <text>{{item3.monthly_sales}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.monthly_sales}}%</text>
+              <text>{{item5.monthly_sales}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">消费会员人数(人)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.member_sales_count}}</text>
+              <text>{{item2.member_sales_count}}</text>
+              <text>{{item3.member_sales_count}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.member_sales_count}}%</text>
+              <text>{{item5.member_sales_count}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">人均消费金额(元)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.sales_amount_per_member}}</text>
+              <text>{{item2.sales_amount_per_member}}</text>
+              <text>{{item3.sales_amount_per_member}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.sales_amount_per_member}}%</text>
+              <text>{{item5.sales_amount_per_member}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">人均消费次数(次)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.sales_count_per_member}}</text>
+              <text>{{item2.sales_count_per_member}}</text>
+              <text>{{item3.sales_count_per_member}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.sales_count_per_member}}%</text>
+              <text>{{item5.sales_count_per_member}}%</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--第二大类 新老会员-->
+    <view class="checkingType">
+      <view class="typeTop" bindtap="checkingType2">
+        <text>新老会员</text>
+        <view class="jt">
+          <image wx:if="{{!typeShows2}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+          <image wx:if="{{typeShows2}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+        </view>
+      </view>
+      <view class="typeBottom" wx:if="{{typeShows2}}">
+        <view class="checkingli">
+          <view class="top">新老会员消费金额比</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.new_old_memeber_sales_amount_ratio}}</text>
+              <text>{{item2.new_old_memeber_sales_amount_ratio}}</text>
+              <text>{{item3.new_old_memeber_sales_amount_ratio}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <!-- <text>{{item4.new_old_memeber_sales_amount_ratio}}</text>
+            <text>{{item5.new_old_memeber_sales_amount_ratio}}</text> -->
+              <text>--</text>
+              <text>--</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">新老会员消费人数比</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.new_old_member_sales_count_ratio}}</text>
+              <text>{{item2.new_old_member_sales_count_ratio}}</text>
+              <text>{{item3.new_old_member_sales_count_ratio}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <!-- <text>{{item4.new_old_member_sales_count_ratio}}</text>
+            <text>{{item5.new_old_member_sales_count_ratio}}</text> -->
+              <text>--</text>
+              <text>--</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">新会员单笔(元)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.new_member_single_sales}}</text>
+              <text>{{item2.new_member_single_sales}}</text>
+              <text>{{item3.new_member_single_sales}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.new_member_single_sales}}%</text>
+              <text>{{item5.new_member_single_sales}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">老会员单笔(元)</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.old_member_single_sales}}</text>
+              <text>{{item2.old_member_single_sales}}</text>
+              <text>{{item3.old_member_single_sales}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.old_member_single_sales}}%</text>
+              <text>{{item5.old_member_single_sales}}%</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--第三大类 会员转化与流失-->
+    <view class="checkingType">
+      <view class="typeTop" bindtap="checkingType3">
+        <text>会员转化与流失</text>
+        <view class="jt">
+          <image wx:if="{{!typeShows3}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730397.png"></image>
+          <image wx:if="{{typeShows3}}" src="https://evathumber.vinistyle.cn/upload/202001/20200114171730828.png"></image>
+        </view>
+      </view>
+      <view class="typeBottom" wx:if="{{typeShows3}}">
+        <view class="checkingli">
+          <view class="top">会员流失率</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.member_turnover_rate}}</text>
+              <text>{{item2.member_turnover_rate}}</text>
+              <text>{{item3.member_turnover_rate}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.member_turnover_rate}}%</text>
+              <text>{{item5.member_turnover_rate}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">一转二会员转化率</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.member_one_to_two_rate}}</text>
+              <text>{{item2.member_one_to_two_rate}}</text>
+              <text>{{item3.member_one_to_two_rate}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.member_one_to_two_rate}}%</text>
+              <text>{{item5.member_one_to_two_rate}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">VIP会员流失率</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.vip_member_trunover_rate}}</text>
+              <text>{{item2.vip_member_trunover_rate}}</text>
+              <text>{{item3.vip_member_trunover_rate}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.vip_member_trunover_rate}}%</text>
+              <text>{{item5.vip_member_trunover_rate}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">VIP消费人数占比</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.vip_member_sales_amount_ratio}}</text>
+              <text>{{item2.vip_member_sales_amount_ratio}}</text>
+              <text>{{item3.vip_member_sales_amount_ratio}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.vip_member_sales_amount_ratio}}%</text>
+              <text>{{item5.vip_member_sales_amount_ratio}}%</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="checkingli">
+          <view class="top">VIP消费金额占比</view>
+          <view class="bottom">
+            <view class="text text1">
+              <text>{{item1.vip_member_sales_count_ratio}}</text>
+              <text>{{item2.vip_member_sales_count_ratio}}</text>
+              <text>{{item3.vip_member_sales_count_ratio}}</text>
+            </view>
+            <view class="text text2">
+              <text>当前值</text>
+              <text>同期值</text>
+              <text>参考值</text>
+            </view>
+            <view class="text text3">
+              <text>差异率</text>
+              <text>{{item4.vip_member_sales_count_ratio}}%</text>
+              <text>{{item5.vip_member_sales_count_ratio}}%</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<view wx:if="{{isShow2}}" class="NoData">
+  <image src="https://evathumber.vinistyle.cn/upload/202001/20200114142339605.png"></image>
+</view>

@@ -1,0 +1,21 @@
+<view class="register">
+    <view class="info">
+      <view class="info-left">
+        <text class="info-tips" wx:if="{{tipsHidden}}">请授权获取微信资料</text>
+        <image class="info-img" src="{{avatarUrl}}"></image>
+        <text class="info-name">{{nickName}}</text>
+      </view>
+      <button class="btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">自动获取</button>
+      <view wx:else>请升级微信版本</view>
+    </view>
+
+    <view class="info">
+      <view class="info-left">
+        <text class="info-tips" wx:if="{{phoneHidden}}">请授权获取微信手机号</text>
+        <text class="info-name">{{mobile}}</text>
+      </view>
+      <button class="btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">自动获取</button>
+    </view>
+
+    <button class="registerBtn" bindtap="registerBtn">注册</button>
+</view>

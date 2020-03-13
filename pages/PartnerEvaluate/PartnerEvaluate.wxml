@@ -1,0 +1,18 @@
+<view class="container">
+  <image class='logo' src="https://evathumber.vinistyle.cn/upload/201912/20191231125024166.png"></image>
+  <view class="title">
+    <text>苏美国际  薇妮VINISTYLE</text>
+    <text>360°市场健康评估考核表</text>
+  </view>
+  <view class="conn">
+    <input class="input" type="digit" bindinput="keyword_1" placeholder="店效" />
+    <input class="input" type="number" bindinput="keyword_2" placeholder="店数" />
+    <input class="input" type="number" bindinput="keyword_3" placeholder="3万以下店数" />
+    <input class="input" type="number" bindinput="keyword_4" placeholder="周期内开店数" />
+    <input class="input" type="number" bindinput="keyword_5" placeholder="周期内关店数" />
+    <input class="input" type="number" value="{{meeting_num}}" disabled='disabled' />
+    <input class="input" type="number" bindinput="keyword_7" placeholder="运营经理数量" />
+  </view>
+  <button class="submitBtn" bindtap="submitBtn">提交</button>
+  <image class="PieChart" src="https://evathumber.vinistyle.cn/upload/202001/20200106104531390.png"></image>
+</view>

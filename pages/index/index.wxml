@@ -1,0 +1,62 @@
+<!-- banner轮播 ↓-->
+<view class="swiper">
+  <swiper class="swiper-conn" indicator-dots="true" autoplay="true" interval="5000" duration="500" indicator-color="rgba(225, 225, 225, .5)" indicator-active-color="#fff">
+    <block wx:for='{{bannerImg}}' wx:key='id'>
+      <swiper-item><image src="{{item.img}}"></image></swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- banner轮播 ↑-->
+
+<!-- 应用导航 ↓ -->
+<view class="conn">
+  <text class="title">应用</text>
+  <view class="list" wx:if="{{isShow}}">
+    <view class="listLi" bindtap='RegBtn'>
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200113164628578.png"></image></view>
+        <text class="listName">注册</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list" wx:else>
+    <view class="listLi" id='{{appraise.id}}' wx:if="{{appraise.show == 1}}" bindtap='appraise' >
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112985.png"></image></view>
+        <text class="listName">市场评估</text>
+      </view>
+    </view>
+    <view class="listLi" id='{{basic_sales.id}}' wx:if="{{basic_sales.show == 1}}" bindtap='basic_sales' >
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112216.png"></image></view>
+        <text class="listName">360°健康测评</text>
+      </view>
+    </view>
+    <view class="listLi" id='{{key_sales.id}}' wx:if="{{key_sales.show == 1}}" bindtap='key_sales'>
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112985.png"></image></view>
+        <text class="listName">关键指标测评</text>
+      </view>
+    </view>
+    <view class="listLi" id='{{profit_assess.id}}' wx:if="{{profit_assess.show == 1}}" bindtap='profit_assess' >
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112985.png"></image></view>
+        <text class="listName">盈利状况测评</text>
+      </view>
+    </view>
+    <view class="listLi" id='{{daily.id}}' wx:if="{{daily.show == 1}}" bindtap='daily' >
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112985.png"></image></view>
+        <text class="listName">门店提报</text>
+      </view>
+    </view>
+    <view class="listLi" id='{{analog_login.id}}' wx:if="{{analog_login.show == 1}}" bindtap='analog_login' >
+      <view class="item">
+        <view class="listImg"><image src="https://evathumber.vinistyle.cn/upload/202001/20200102142112985.png"></image></view>
+        <text class="listName">模拟登录</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 应用导航 ↑-->

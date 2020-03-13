@@ -1,0 +1,143 @@
+page{
+  background: #f7f7f7;
+}
+.checkingTop{
+  width: 100%;
+}
+.checkingTop{
+  width: 100%;
+  display: block;
+  margin:40rpx auto;
+  padding:0rpx 30rpx 40rpx;
+  box-sizing: border-box;
+}
+.checkingTop .top{
+  width: 93%;
+  background: #bfbfbf;
+  height: 60rpx;
+  line-height: 60rpx;
+  color:#fff;
+  text-indent: 1em;
+  border-radius: 25rpx 25rpx 0rpx 0rpx;
+  margin:auto;
+}
+.checkingTop .bottom{
+  width:100%;
+  margin:auto;
+  background:#fff;
+  border-radius: 15rpx;
+  box-shadow:0px 2rpx 7rpx 0px #c5c5c5;
+}
+.checkingTop .bottom .num{
+  width:100%;
+  display: block;
+  color: #3e3a39;
+  font-size: 55rpx;
+  padding:20rpx 50rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.checkingTop .bottom .tips{
+  width:100%;
+  margin:auto;
+  display: block;
+  color:#c8c6c5;
+  font-size: 26rpx;
+  padding:15rpx 50rpx;
+  box-sizing: border-box;
+}
+
+.checkingBottom{
+  width: 100%;
+  display: block;
+  margin:0rpx auto;
+  box-sizing: border-box;
+  padding-bottom:100rpx;
+}
+.checkingli{
+  width: 100%;
+  margin:40rpx auto;
+  padding:0rpx 30rpx 40rpx;
+  box-sizing: border-box;
+}
+.checkingli .top{
+  width: 90%;
+  background:#f19dad;
+  color:#fff;
+  text-indent: 1em;
+  border-radius: 25rpx 25rpx 0rpx 0rpx;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  padding:10rpx 0rpx;
+  box-sizing: border-box;
+}
+.checkingli .bottom{
+  width:100%;
+  margin:auto;
+  background:#fff;
+  border-radius: 15rpx;
+  box-shadow:0px 2rpx 7rpx 0px #c5c5c5;
+}
+.checkingli .bottom .text{
+  width: 100%;
+  display:flex;
+}
+.checkingli .bottom .text text{
+  flex: 1;
+  text-align: center;
+}
+.checkingli .bottom .text1{
+  font-size: 35rpx;
+  padding:20rpx 0rpx 5rpx;
+  color:#565252;
+}
+.checkingli .bottom .text1 text:first-child{
+  color: #f19dad
+}
+.checkingli .bottom .text2{
+  font-size:25rpx;
+  color:#cacaca;
+  border-bottom: 1rpx solid #f8f8f8;
+  padding:0rpx 0rpx 15rpx;
+}
+.checkingli .bottom .text3{
+  font-size: 35rpx;
+  padding:15rpx 0rpx;
+  color:#565252;
+}
+.checkingli .bottom .text3 text:first-child{
+  color: #cacaca;
+  font-size:25rpx;
+}
+.NoData image{
+  width: 316rpx;
+  height: 389rpx;
+  display:block;
+  margin:40rpx auto;
+}
+.typeTop{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:#fff;
+  padding:0rpx 35rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f8f8f8;
+
+}
+.typeTop text{
+  font-size:33rpx;
+  color:#565252;
+}
+.typeTop .jt{
+  width:30rpx;
+  height: 30rpx;
+  display:block;
+}
+.typeTop .jt image{
+  width:100%;
+  height: 100%;
+  display: block;
+}

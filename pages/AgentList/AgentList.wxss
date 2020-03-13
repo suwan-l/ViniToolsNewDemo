@@ -1,0 +1,40 @@
+page{
+  background:#f19dad;
+}
+.logo {
+  width: 165rpx;
+  height: 45rpx;
+  margin: 50rpx auto 40rpx;
+  display: block;
+}
+.title {
+  color: #fff;
+  font-size: 48rpx;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  margin: 140rpx auto;
+}
+
+.list{
+  width: 95%;
+  margin: 65rpx auto;
+}
+.list-info{
+  background:#fff;
+  border-radius: 10rpx;
+  box-shadow:0px 2rpx 7rpx 0px #c5c5c5;
+  margin:35rpx 0rpx;
+  color:#808080;
+}
+.desc{
+  padding:30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size:28rpx;
+}
+.state-on{
+  color:#f29dac;
+}

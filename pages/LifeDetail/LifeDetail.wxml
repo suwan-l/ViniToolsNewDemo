@@ -1,0 +1,41 @@
+<view class="conn">
+  <view class="bottom">
+    <view class="detail">
+      <view class="left">
+        <text class="num">{{step7}}</text>
+        <text class="tips">盈亏平衡点(元)</text>
+      </view>
+    </view>
+    <text class="remarks">注：指月度销售额达到该数值则保持盈亏平衡。</text>
+  </view>
+
+  <view class="bottom">
+    <view class="detail">
+      <view class="left">
+        <text class="num">{{step9_month}}</text>
+        <text class="tips">月销售额(元)</text>
+      </view>
+    </view>
+    <text class="remarks">注：指月度平均销售额须达到该数值才能实现期望投资回报。</text>
+  </view>
+
+  <view class="bottom">
+    <view class="detail">
+      <view class="left">
+        <text class="num">{{step9_year}}</text>
+        <text class="tips">年销售额(元)</text>
+      </view>
+    </view>
+    <text class="remarks">注：指年销售额须达到该数值才能实现期望投资回报。</text>
+  </view>
+
+  <view class="bottom">
+    <view class="detail">
+      <view class="left">
+        <text class="num">{{step10}}</text>
+        <text class="tips">年度会员人数(人)</text>
+      </view>
+    </view>
+    <text class="remarks">注：指消费人数达到该值方可实现期望投资回报。</text>
+  </view>
+</view>

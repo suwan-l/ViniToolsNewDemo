@@ -1,0 +1,107 @@
+<view class='top'>
+  <view class="info">
+    <view class="left">
+      <text class="rank">{{stateText}}</text>
+    </view>
+    <view class="right">
+      <view class="name">您的市场综合评分为<text>{{item.total_score}}</text>分</view>
+    </view>
+  </view>
+
+  <view class="progress">
+    <view class="state">
+      <view>
+        <text>10</text>
+        <image wx:if="{{rankSum >=10}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>9</text>
+        <image wx:if="{{rankSum >=9 && rankSum <10}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>8</text>
+        <image wx:if="{{rankSum >=8 && rankSum <9}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>7</text>
+        <image wx:if="{{rankSum >=7 && rankSum <8}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>6</text>
+        <image wx:if="{{rankSum >=6 && rankSum <7}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>5</text>
+        <image wx:if="{{rankSum >=5 && rankSum <6}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>4</text>
+        <image wx:if="{{rankSum >=4 && rankSum <5}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>3</text>
+        <image wx:if="{{rankSum >=3 && rankSum <4}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>2</text>
+        <image wx:if="{{rankSum >=2 && rankSum <3}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+      <view>
+        <text>1</text>
+        <image wx:if="{{rankSum >=1 && rankSum <2}}" class="jt" src="https://evathumber.vinistyle.cn/upload/202001/20200104125415430.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom">
+  <view>
+    <text class="tit">店效</text>
+    <text class="desc">{{item.sale}} 元</text>
+  </view>
+  <view>
+    <text class="tit">店数</text>
+    <text class="desc">{{item.total_num}} 家</text>
+  </view>
+  <view>
+    <text class="tit">3万以下店数</text>
+    <text class="desc">{{item.min_num}} 家</text>
+  </view>
+  <view>
+    <text class="tit">周期内开店数</text>
+    <text class="desc">{{item.quarter_open_num}} 家</text>
+  </view>
+  <view>
+    <text class="tit">周期内关店数</text>
+    <text class="desc">{{item.quarter_close_num}} 家</text>
+  </view>
+  <view>
+    <text class="tit">组织会议次数</text>
+    <text class="desc">{{item.meeting_num}} 次</text>
+  </view>
+  <view>
+    <text class="tit">运营经理数量</text>
+    <text class="desc">{{item.operate_num}} 人</text>
+  </view>
+</view>
+
+<view class="remarks">
+  <view class="remarks_tit">
+  <image src="https://evathumber.vinistyle.cn/upload/202001/20200106105253549.png"></image>
+  备注
+  </view>
+  <view class="remarks_score">
+    <text>{{'>'}}8.5 </text>
+    <text> 7~8.5 </text>
+    <text> 6~7 </text>
+    <text> 4~6 </text>
+    <text>{{'<'}}4</text>
+  </view>
+  <view class="remarks_text">
+    <text>优秀</text>
+    <text>健康</text>
+    <text>亚健康</text>
+    <text>不健康</text>
+    <text>危险</text>
+  </view>
+</view>

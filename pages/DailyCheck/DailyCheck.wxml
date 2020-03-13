@@ -1,0 +1,33 @@
+<!--门店提报 - 日报查看-->
+<view class="container">
+	<text class="title">门店提报 - 日报查看</text>
+	<view class="conn">
+		<view><text>日期：       </text><input class="input" disabled='disabled' value="{{item.date}}"/></view>
+		<view><text>区域：       </text><input class="input" disabled='disabled' value="{{item.store.store_area}}"/></view>
+		<view><text>门店：       </text><input class="input" disabled='disabled' value="{{item.store.store_name}}"/></view>
+		<view><text>当日业绩：   </text><input class="input"  disabled='disabled' value="{{item.sale}}"/></view>
+		<view><text>累计业绩：    </text><input class="input" disabled='disabled' value="{{item.total_sale}}"/></view>
+		<view><text>新增会员人数：</text><input class="input" disabled='disabled' value="{{item.new_member_count}}"/></view>
+		<view><text>新增会员单笔：</text><input class="input" disabled='disabled' value="{{item.new_member_sale}}"/></view>
+		<view><text>老会员人数：  </text><input class="input" disabled='disabled' value="{{item.old_member_count}}"/></view>
+		<view><text>老会员单笔：  </text><input class="input" disabled='disabled' value="{{item.old_member_sale}}"/></view>
+		<view  wx:if='{{community_show}}'><text>累计社群新客人数：  </text><input class="input" disabled='disabled' value="{{item.community_new_count}}"/></view>
+		<view  wx:if='{{community_show}}'><text>累计社群老客人数：  </text><input class="input" disabled='disabled' value="{{item.community_old_count}}"/></view>
+		<view  wx:if='{{community_show}}'><text>累计社群总人数：  </text><input class="input" disabled='disabled' value="{{item.community_count}}"/></view>
+    <view><text>消费会员人数：</text><input class="input" disabled='disabled' value="{{item.member_count}}"/></view>
+		<view><text>消费会员单笔：</text><input class="input" disabled='disabled' value="{{item.member_sale}}"/></view>
+	</view>
+
+	<view class="plan">
+		<text>今日工作</text>
+		<text class="InputText" disabled='disabled'>{{item.today_work}}</text>
+	</view>
+
+	<view class="plan">
+		<text>明日计划</text>
+		<view class="target"><text>业绩目标：</text><input class="input" disabled='disabled' value="{{item.tomorrow_sale}}"/></view>
+		<text class="InputText" disabled='disabled'>{{item.tomorrow_plan}}</text>
+	</view>
+
+	<button class="submitBtn" bindtap="back_btn">返回</button>
+</view>

@@ -1,0 +1,16 @@
+<view class="conn">
+  <text class="title">{{date_quarter}}会议照片提交</text>
+  <view class="uploader">
+    <view class='pic' wx:for="{{images}}" wx:for-item="item" wx:key="*this">
+      <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+          <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+      </image>
+    </view>
+    <!-- 用来提示用户上传图片 -->
+    <view class="upload-img" bindtap="chooseImg" wx:if='{{images.length < 9}}'>
+      <image src="https://evathumber.vinistyle.cn/upload/201912/20191231143618695.png"></image>
+    </view>
+  </view>
+  <button class="submitBtn" bindtap="submitBtn">提交</button>
+  <view class="noimg" bindtap="noimg">无照片提交</view>
+</view>

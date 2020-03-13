@@ -1,0 +1,7 @@
+<view class="role">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+    <view class="picker">
+      选择您的身份  {{array[index].name}}
+    </view>
+  </picker>
+</view>

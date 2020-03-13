@@ -1,0 +1,15 @@
+<view class="conn">
+  <text class="title">审核会议照片</text>
+  <text class="title">{{item.agent_name}} {{item.date_quarter}}月会议</text>
+  <view class="pic">
+    <block wx:if="{{meetingArry == ''}}">
+      <text class="tips">无会议照片</text> 
+    </block>
+    <block wx:else>
+      <view wx:for="{{meetingArry}}" wx:key=''><image src="{{item}}"></image></view>
+    </block>
+  </view>
+  <text>请输入组织会议次数</text>
+  <input class="input" type="number" bindinput="meeting_num" placeholder="组织会议次数" />
+  <button class="review" bindtap="reviewBtn">审核</button>
+</view>

@@ -1,0 +1,21 @@
+<!--门店提报-日报列表-->
+<view class="container">
+  <text class="title">门店提报 - 日报列表</text>
+  <text class="record">{{store.store_name}}</text>
+  <view class="record_select">
+    <text class="record_detail">累计业绩：{{total.total_sale}}</text>
+  </view>
+
+  <!--日报列表-->
+  <view class="conn" style="height:{{winHeight}}rpx;">
+    <view class="list" wx:for="{{homeList}}" wx:key='index' bindtap="daily_sheet" data-id="{{item.id}}" data-date="{{item.date}}" data-status="{{item.status}}">
+      <view class="name">
+        <text>{{item.date}}</text>
+        <text class="status">{{item.status== 0 ? '待填报' : ''}}</text>
+      </view>
+      <text class="detail">当日业绩：{{item.sale== null ? '待填报': item.sale}}</text>    
+    </view>
+    <!--全部加载完成提示-->
+    <text class='remind' wx:if="{{bottomTips==0}}">已经到底啦...</text>
+  </view>
+</view>

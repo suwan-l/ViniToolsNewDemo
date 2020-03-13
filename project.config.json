@@ -1,0 +1,126 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxff996827e4cfcc4e",
+	"projectname": "%E8%96%87%E5%A6%AE%E5%8A%A9%E6%89%8B",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 7,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "门店提报-日报列表",
+					"pathName": "pages/DailyList/DailyList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "门店360评估",
+					"pathName": "pages/SingleEvaluate/SingleEvaluate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "门店360评估结果",
+					"pathName": "pages/SingleDetail/SingleDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关键指标自检",
+					"pathName": "pages/Checking/Checking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关键指标自检结果",
+					"pathName": "pages/CheckingDetail/CheckingDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "生命周期模型",
+					"pathName": "pages/LifeCycle/LifeCycle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "生命周期模型结果",
+					"pathName": "pages/LifeDetail/LifeDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "门店提报-门店列表",
+					"pathName": "pages/StoresList/StoresList",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}
